@@ -2,7 +2,6 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 import { api, clearAuthHeader, setAuthHeader } from 'api/axiosDefaults';
 import axios from 'axios';
 import { toast } from 'react-toastify';
-
 api();
 
 export const register = createAsyncThunk(
@@ -14,7 +13,7 @@ export const register = createAsyncThunk(
       setAuthHeader(res.data.token);
       return res.data;
     } catch (error) {
-      toast.error(`${error.res.data.message} Please try again. ❌`);
+      toast.error(`This user is already registered. ❌`);
       return thunkAPI.rejectWithValue(error.message);
     }
   }
