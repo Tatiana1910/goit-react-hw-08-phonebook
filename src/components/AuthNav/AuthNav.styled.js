@@ -1,8 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
-import { SlBookOpen } from 'react-icons/sl';
-
-export const NavLinkStyle = styled(NavLink)`
+export const StyledNavLink = styled(NavLink)`
   padding-top: 16px;
   padding-bottom: 16px;
   color: white;
@@ -24,17 +22,8 @@ export const NavLinkStyle = styled(NavLink)`
   }
 `;
 
-export const StyledIcon = styled(SlBookOpen)`
+export const StyledDiv = styled.div`
   display: flex;
-  flex-flow: column;
-  align-items: center;
+  gap: 20px;
   padding: 15px;
-  color: white;
-  font-size: 60px;
-`;
-
-export const StyledNav = styled.nav`
-  display: flex;
-  gap: 55px;
-  align-items: center;
 `;

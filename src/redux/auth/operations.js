@@ -13,7 +13,7 @@ export const register = createAsyncThunk(
       setAuthHeader(res.data.token);
       return res.data;
     } catch (error) {
-      toast.error(`This user is already registered. ❌`);
+      toast.error(`Please try again. ❌`);
       return thunkAPI.rejectWithValue(error.message);
     }
   }
